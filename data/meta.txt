@@ -1,0 +1,74 @@
+{
+	"@context": {
+		"nmo" : "http://nomisma.org/ontology#",
+		"foaf" : "http://xmlns.com/foaf/0.1/",
+		"schema": "https://schema.org/",
+		"dcterms": "http://purl.org/dc/terms/",
+		"id": "@id",
+		"name": "schema:name",
+		"series": "nmo:hasTypeSeriesItem",
+		"axis": "nmo:hasAxis",
+		"diameter": "nmo:hasDiameter",
+		"weight": "nmo:hasWeight",
+		"material": "nmo:hasMaterial",
+		"denomination": "nmo:hasDenomination",
+		"start-date": "nmo:hasStartDate",
+		"end-date": "nmo:hasEndDate",
+		"authority": "nmo:hasAuthority",
+		"obv": "nmo:hasObverse",
+		"rev": "nmo:hasReverse",
+		"image": "foaf:depiction",
+		"thumbnail": "foaf:thumbnail",
+		"legend": "nmo:hasLegend",
+		"description": "dcterms:description"o
+	},
+	"id": [coin id],
+	"name": [coin name],
+	"series": [coin series],
+	"axis": [coin axis],
+	"diameter": [coin diameter],
+	"weight": [coin weight],
+	"material": [coin material],
+	"denomination": [coin denomination],
+	"start-date": [coin start date],
+	"end-date": [coin end date],
+	"authority": {
+		"id": [person id]
+	},
+	"obv": {
+		"id": [obverse person id]
+		"image": [coin obverse image]
+		"thumbnail": [coin obverse thumbnail]
+		"legend": [coin obverse legend]
+		"description": [coin obverse description]
+	}
+	"rev": {
+		"id": [reverse person id]
+		"image": [coin reverse image]
+		"thumbnail": [coin reverse thumbnail]
+		"legend": [coin reverse legend]
+		"description": [coin reverse description]
+	}
+}
+
+
+{
+	"@context": {
+		"foaf" : "http://xmlns.com/foaf/0.1/",
+		"rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"schema": "https://schema.org/",
+		"id": "@id",
+		"name": "schema:name",
+		"person-introduction": "skos:definition",
+		"person-description": "rdfs:comment",
+		"wiki-url": "foaf:isPrimaryTopicOf",
+		"person-image-url": "foaf:depiction"
+	},
+	"id": [person id],
+	"name": [person name],
+	"person-introduction": [person definition],
+	"person-description": [person description]
+	"wiki-url": [wikipedia url],
+	"person-image-url": [person's image url]
+}

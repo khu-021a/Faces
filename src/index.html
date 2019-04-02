@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="Description" content="A simple prototype PWA system to present Ancient Roman Empire Coins and relevant historical figures.">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#c0c0c0">
+        <meta name="msapplication-TileColor" content="#c0c0c0">
+        <meta name="msapplication-TileImage" content="/static/mstile-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        
+        <title>Faces: Ancient Roman Empire Numismatics</title>
+        <style>
+            body {
+                margin: 0;
+                width: 100vw;
+            }
+
+            header {
+                background-color: silver;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                padding: 40px 0;
+            }
+
+            .logo {
+                max-width: 250px;
+                max-height: 250px;
+                margin: auto;
+            }
+
+            h1, h2 {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: auto;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="/static/logo.png" class="logo" alt="Faces Logo"/>
+            <h1 class="title">Faces</h1>
+            <h2 class="category">Ancient Roman Empire Numismatics</h2>
+        </header>
+        <main role="main">
+            <div id="app"></div>
+        </main>
+        <script>
+            if ('serviceWorker' in navigator && 'SyncManager' in window) {
+                navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Service worker registration is successful with scope: ', reg.scope))
+                .catch(err => console.log('Service worker registration failed: ', err))
+            }
+        </script>
+    </body>
+</html>
